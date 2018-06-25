@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar</title>
+    <script src="./node_modules/moment/moment.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="toastr.min.css">
+    <script src="toastr.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header container -->
+        <h1 id="h1"></h1>
+        <!-- Week days created -->
+        <div class="dates2">
+            <div class="red width">Sunday</div>
+            <div class="width">Monday</div>
+            <div class="width">Tuesday</div>
+            <div class="width">Wednesday</div>
+            <div class="width">Thursday</div>
+            <div class="width">Friday</div>
+            <div class="red width">Saturday</div>
+        </div>
+        <!-- Calendar days container -->
+        <div id='calendar' class="dates"></div>
+        <!-- Arrows for changing the month -->
+        <div class="inline">
+            <div id="arrow1">◄</div>
+            <div class="changedDate">
+                <span id="centered"></span>
+            </div>
+            <div id="arrow2">►</div>
+        </div>
+        <!-- Modal with form -->
+        <form id="form">
+            <div id="modalBox">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+                    <h1 id="modalHeader">Form</h1>
+                    <input id="fName" class="len100" type="text" placeholder='First Name' autofocus>
+                    <input id="email" class="len100" type="email" placeholder='Email'>
+                    <div class="middle">
+                        <button id="submit" value="submit" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="loading">
+        <div id="loading-content">
+            <img src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
